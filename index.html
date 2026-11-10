@@ -215,7 +215,7 @@
 </section>
 
 <!-- ============ 4 · PICO: A ENERGIZAÇÃO ============ -->
-<section class="s-cabine" id="cabine" data-fx-fixa data-fx-altura="7">
+<section class="s-cabine" id="cabine" data-fx-fixa data-fx-altura="4.2">
   <div class="fx-palco">
     <div class="luz" aria-hidden="true"><i class="luz-onda"></i><i class="luz-disco"></i></div>
     <canvas class="faiscas" aria-hidden="true"></canvas>
@@ -223,6 +223,12 @@
 
     <div class="cabine-grade">
       <div class="chave-palco" data-flip aria-hidden="true">
+          <ul class="checklist checklist-lado">
+            <li data-on=".26"><span>Elo fusível</span><em data-off="Ausente" data-on-txt="Inserido">Ausente</em></li>
+            <li data-on=".46"><span>Proteções</span><em data-off="Em teste" data-on-txt="Conferidas">Em teste</em></li>
+            <li data-on=".77"><span>Cartucho</span><em data-off="Aberto" data-on-txt="Fechado">Aberto</em></li>
+            <li data-on=".88"><span>Cabine primária</span><em data-off="Desenergizada" data-on-txt="Energizada">Desenergizada</em></li>
+          </ul>
         <svg class="chave-fusivel" viewBox="0 -30 430 730">
           <defs>
             <pattern id="hachura" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -336,12 +342,6 @@
             <div class="leitura leitura-cabine"><span>Cabine</span><b class="kv">0,0</b><small>kV</small></div>
           </div>
           <div class="medidor"><i class="medidor-barra"></i></div>
-          <ul class="checklist">
-            <li data-on=".26"><span>Elo fusível</span><em data-off="Ausente" data-on-txt="Inserido">Ausente</em></li>
-            <li data-on=".46"><span>Proteções</span><em data-off="Em teste" data-on-txt="Conferidas">Em teste</em></li>
-            <li data-on=".77"><span>Cartucho</span><em data-off="Aberto" data-on-txt="Fechado">Aberto</em></li>
-            <li data-on=".88"><span>Cabine primária</span><em data-off="Desenergizada" data-on-txt="Energizada">Desenergizada</em></li>
-          </ul>
         </div>
       </div>
     </div>

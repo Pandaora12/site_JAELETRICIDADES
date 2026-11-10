@@ -455,7 +455,7 @@
         if (!en.isIntersecting) return;
         obs.unobserve(en.target);
         var i = cubs.indexOf(en.target);
-        setTimeout(function () { en.target.classList.add("aberto"); }, 140 + (i % 3) * 160);
+        setTimeout(function () { en.target.classList.add("aberto"); }, 220 + (i % 3) * 320);
       });
     }, { threshold: 0.45 });
     cubs.forEach(function (c) { obs.observe(c); });
