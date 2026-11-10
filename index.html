@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J.A Eletricidades · Média e alta tensão</title>
+<meta name="description" content="Há mais de 35 anos a J.A Eletricidades constrói e mantém cabines primárias, subestações, transformadores, redes de distribuição e painéis de média tensão. São Paulo, com atendimento em todo o Brasil.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Michroma&family=Saira:wdth,wght@75..125,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sites-incriveis.css">
+<link rel="stylesheet" href="estilo.css">
+<script src="sites-incriveis.js" defer></script>
+<script src="ja.js" defer></script>
+</head>
+<body>
+
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+
+<!-- ============ NAVEGAÇÃO ============ -->
+<header class="nav">
+  <a class="marca" href="#topo" data-arco aria-label="J.A Eletricidades, início">
+    <span class="selo selo-nav"><svg viewBox="0 0 240 124" aria-hidden="true"><text class="logo-ja" x="120" y="76">J.A</text><text class="logo-nome" x="120" y="114" textLength="196" lengthAdjust="spacingAndGlyphs">Eletricidades</text></svg></span>
+  </a>
+  <ol class="trajeto" aria-label="O caminho da energia">
+    <li data-alvo="linha"><a href="#linha">Linha</a></li>
+    <li data-alvo="subestacao"><a href="#subestacao">Subestação</a></li>
+    <li data-alvo="cabine"><a href="#cabine">Cabine</a></li>
+    <li data-alvo="paineis"><a href="#paineis">Painéis</a></li>
+    <li data-alvo="contato"><a href="#contato">Você</a></li>
+  </ol>
+  <p class="status" aria-live="polite"><i aria-hidden="true"></i><span class="status-txt">Desenergizado</span></p>
+  <a class="nav-cta" href="#contato" data-arco>Orçamento</a>
+</header>
+
+<canvas class="arco-cursor" aria-hidden="true"></canvas>
+<div class="atalhos">
+  <button class="topo" type="button" aria-label="Voltar ao início da página"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="topo-trilho" cx="28" cy="28" r="25"/><defs><clipPath id="topo-recorte"><circle cx="28" cy="28" r="19"/></clipPath></defs><circle class="topo-progresso" cx="28" cy="28" r="25" pathLength="1"/><g clip-path="url(#topo-recorte)"><path class="topo-seta" d="M28 36V20M21 27l7-7 7 7"/><path class="topo-seta topo-seta-2" d="M28 36V20M21 27l7-7 7 7"/></g></svg><span class="topo-txt">Topo</span></button>
+  <a class="whats" href="https://wa.me/5511999181975?text=Ol%C3%A1%2C%20J.A%20Eletricidades!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-arco aria-label="Falar com a J.A no WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="whats-balao" d="M24 7a17 17 0 0 0-14.6 25.7L7 41l8.6-2.3A17 17 0 1 0 24 7z"/><path class="whats-fone" d="M17.6 16c.6-1 1.6-1.2 2.3-.6l2 2.4c.5.7.4 1.6-.2 2.2l-1 .9c.9 2 2.6 3.7 4.6 4.6l.9-1c.6-.6 1.5-.7 2.2-.2l2.4 2c.6.7.4 1.7-.6 2.3-1.4.9-3.1 1.1-4.7.4-4-1.8-7.1-4.9-8.9-8.9-.7-1.6-.5-3.3.4-4.7z"/></svg><span class="whats-txt">WhatsApp</span></a>
+</div>
+<div class="regua" aria-hidden="true"><div class="regua-trilho"><i class="regua-marcas"></i><i class="regua-preench"></i></div><span class="regua-cursor"><b class="regua-kv">0,0</b><small>kV</small></span></div>
+
+<main id="principal">
+
+<!-- ============ 1 · ABERTURA ============ -->
+<section class="s-abertura" id="topo">
+  <svg class="cabos" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true">
+    <g class="cabos-fase">
+      <path d="M-20 70 Q720 190 1460 50"/>
+      <path d="M-20 96 Q720 218 1460 78"/>
+      <path d="M-20 122 Q720 246 1460 106"/>
+    </g>
+    <g class="cabos-pulso">
+      <path d="M-20 70 Q720 190 1460 50"/>
+      <path d="M-20 96 Q720 218 1460 78"/>
+      <path d="M-20 122 Q720 246 1460 106"/>
+    </g>
+  </svg>
+
+  <div class="placa" data-fx-mouse="5" aria-hidden="true">
+    <div class="placa-topo">Perigo</div>
+    <div class="placa-corpo">
+      <svg viewBox="0 0 48 64"><path d="M28 2 8 36h14l-6 26 26-38H28L34 2z"/></svg>
+      <strong>Alta<br>tensão</strong>
+      <span>13.800 V</span>
+    </div>
+  </div>
+
+  <div class="abertura-texto">
+    <p class="rotulo">Média e alta tensão · São Paulo para o Brasil</p>
+    <h1 data-fx="palavras" data-fx-duracao="1200" data-arco>Onde a energia é perigosa, a gente entra.</h1>
+    <p class="lead" data-fx="surgir" data-fx-atraso="900">Há mais de 35 anos a J.A Eletricidades constrói, monta e mantém a infraestrutura elétrica de indústrias, construtoras, condomínios e grandes redes. Da linha da concessionária ao último painel.</p>
+    <div class="acoes" data-fx="surgir" data-fx-atraso="1150">
+      <a class="btn btn-claro" href="#contato" data-arco>Pedir orçamento</a>
+      <p class="fatos"><b>35+</b> anos <span>/</span> atendimento em todo o Brasil</p>
+    </div>
+    <div class="docs" data-fx="surgir" data-fx-atraso="1350">
+      <p class="docs-rotulo">Documentação em dia</p>
+      <ul class="docs-lista">
+        <li>NR 10 <span>SEP</span></li>
+        <li>NR 18</li>
+        <li>NR 35</li>
+        <li>NR 6</li>
+        <li>PCMSO</li>
+        <li>PGR</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="osc" aria-hidden="true">
+    <canvas class="osc-canvas"></canvas>
+    <span class="osc-l">Fases A · B · C</span>
+    <span class="osc-r">60 Hz</span>
+  </div>
+</section>
+
+<!-- ============ 2 · A LINHA ============ -->
+<section class="s-linha" id="linha" data-fx-fixa data-fx-altura="4.2">
+  <div class="fx-palco">
+    <div class="linha-cabeca">
+      <p class="rotulo"><span class="etapa">01</span> A linha</p>
+      <h2 data-arco>Levamos a rede até onde ela precisa chegar.</h2>
+      <p>Aérea ou subterrânea, nova ou existente. Cada vão desta linha é um serviço que a J.A executa de ponta a ponta.</p>
+    </div>
+    <div class="trilho" data-fx="trilho">
+      <svg class="linha-svg" aria-hidden="true"></svg>
+      <div class="vao-inicio" aria-hidden="true"></div>
+      <article class="vao">
+        <div class="vao-corpo">
+          <p class="vao-tag">Vão 01</p>
+          <h3>Redes aéreas de distribuição</h3>
+          <p>Postes, cruzetas, isoladores e condutores. Projetamos e erguemos redes aéreas de média e baixa tensão, do primeiro vão até a ligação do cliente.</p>
+        </div>
+      </article>
+      <article class="vao vao-sub">
+        <div class="vao-corpo">
+          <p class="vao-tag">Vão 02</p>
+          <h3>Redes subterrâneas</h3>
+          <p>Quando a rede precisa sumir da paisagem: dutos, caixas de passagem e cabos isolados, enterrados com o mesmo rigor da rede aérea.</p>
+        </div>
+      </article>
+      <article class="vao">
+        <div class="vao-corpo">
+          <p class="vao-tag">Vão 03</p>
+          <h3>Extensão e construção de redes</h3>
+          <p>Loteamento novo, fábrica nova, obra que precisa de energia antes de ficar pronta. Estendemos a rede existente até o ponto de entrega.</p>
+        </div>
+      </article>
+      <article class="vao">
+        <div class="vao-corpo">
+          <p class="vao-tag">Vão 04</p>
+          <h3>Manutenção de redes elétricas</h3>
+          <p>Preventiva, corretiva e emergencial. Rede parada é operação parada, e a gente vai até lá e resolve.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · A SUBESTAÇÃO ============ -->
+<section class="s-sub" id="subestacao">
+  <div class="sub-grade">
+    <figure class="folha" aria-label="Diagrama unifilar ilustrativo de uma subestação típica">
+      <svg class="unifilar" viewBox="0 0 800 560" aria-hidden="true">
+        <defs>
+          <pattern id="quadricula" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-opacity=".07" stroke-width="1"/>
+          </pattern>
+          <pattern id="terra" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <path d="M0 0V10" stroke="currentColor" stroke-opacity=".35" stroke-width="1.2"/>
+          </pattern>
+        </defs>
+        <rect width="800" height="560" fill="url(#quadricula)"/>
+        <text class="u-txt" x="24" y="76">ENTRADA 13,8 kV</text>
+        <!-- entrada -->
+        <path class="u" data-o="0" pathLength="1" d="M24 100H118"/>
+        <!-- seccionadora -->
+        <circle class="u" data-o="1" pathLength="1" cx="122" cy="100" r="4"/>
+        <path class="u" data-o="1" pathLength="1" d="M124 98L166 80"/>
+        <path class="u" data-o="1" pathLength="1" d="M172 100H230"/>
+        <!-- disjuntor -->
+        <rect class="u" data-o="2" pathLength="1" x="230" y="84" width="32" height="32"/>
+        <path class="u" data-o="2" pathLength="1" d="M262 100H380"/>
+        <!-- medição -->
+        <circle class="u" data-o="2" pathLength="1" cx="320" cy="100" r="13"/>
+        <!-- barramento -->
+        <path class="u u-barra" data-o="3" pathLength="1" d="M380 56V500"/>
+        <!-- alimentadores -->
+        <path class="u" data-o="4" pathLength="1" d="M380 160H470"/>
+        <circle class="u" data-o="4" pathLength="1" cx="488" cy="160" r="18"/>
+        <circle class="u" data-o="4" pathLength="1" cx="512" cy="160" r="18"/>
+        <path class="u" data-o="4" pathLength="1" d="M530 160H690L680 152M690 160L680 168"/>
+
+        <path class="u" data-o="5" pathLength="1" d="M380 310H470"/>
+        <circle class="u" data-o="5" pathLength="1" cx="488" cy="310" r="18"/>
+        <circle class="u" data-o="5" pathLength="1" cx="512" cy="310" r="18"/>
+        <path class="u" data-o="5" pathLength="1" d="M530 310H690L680 302M690 310L680 318"/>
+
+        <path class="u" data-o="6" pathLength="1" d="M380 460H470"/>
+        <circle class="u" data-o="6" pathLength="1" cx="488" cy="460" r="18"/>
+        <circle class="u" data-o="6" pathLength="1" cx="512" cy="460" r="18"/>
+        <path class="u u-sub" data-o="6" pathLength="1" d="M530 460H690L680 452M690 460L680 468"/>
+        <rect class="u-terra" x="530" y="474" width="160" height="16" fill="url(#terra)"/>
+
+        <!-- marcadores numerados -->
+        <g class="u-num" data-o="3"><circle cx="410" cy="56" r="14"/><text x="410" y="61">1</text></g>
+        <g class="u-num" data-o="4"><circle cx="500" cy="120" r="14"/><text x="500" y="125">2</text></g>
+        <g class="u-num" data-o="5"><circle cx="500" cy="270" r="14"/><text x="500" y="275">3</text></g>
+        <g class="u-num" data-o="6"><circle cx="500" cy="420" r="14"/><text x="500" y="425">4</text></g>
+        <text class="u-txt" x="704" y="165">BT</text>
+        <text class="u-txt" x="704" y="315">BT</text>
+        <text class="u-txt" x="704" y="465">BT</text>
+      </svg>
+      <figcaption class="carimbo">
+        <span><b>J.A Eletricidades</b></span>
+        <span>Diagrama unifilar · subestação típica</span>
+        <span>Des. SE-01</span>
+        <span>Esc. s/e</span>
+      </figcaption>
+    </figure>
+
+    <div class="sub-texto">
+      <p class="rotulo"><span class="etapa">02</span> A subestação</p>
+      <h2 data-fx="subir" data-arco>Engenharia, não improviso.</h2>
+      <p class="sub-lead" data-fx="surgir" data-fx-atraso="150">Entre a rede e a sua operação existe um desenho que precisa estar certo. A J.A projeta, instala e mantém cada peça dele.</p>
+      <ol class="legenda">
+        <li data-o="3"><b>1</b><div><h3>Subestações</h3><p>Abrigadas ou ao tempo, com proteção, medição e transformação no lugar certo.</p></div></li>
+        <li data-o="4"><b>2</b><div><h3>Postos de transformação</h3><p>Em poste ou abrigados, dimensionados para a carga real de quem vai usar.</p></div></li>
+        <li data-o="5"><b>3</b><div><h3>Transformadores aéreos</h3><p>Instalação, substituição e manutenção em estrutura de poste.</p></div></li>
+        <li data-o="6"><b>4</b><div><h3>Transformadores subterrâneos</h3><p>Em câmara ou pedestal, para quem precisa da energia sem a estrutura à vista.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · PICO: A ENERGIZAÇÃO ============ -->
+<section class="s-cabine" id="cabine" data-fx-fixa data-fx-altura="7">
+  <div class="fx-palco">
+    <div class="luz" aria-hidden="true"><i class="luz-onda"></i><i class="luz-disco"></i></div>
+    <canvas class="faiscas" aria-hidden="true"></canvas>
+    <div class="clarao" aria-hidden="true"></div>
+
+    <div class="cabine-grade">
+      <div class="chave-palco" data-flip aria-hidden="true">
+        <svg class="chave-fusivel" viewBox="0 -30 430 730">
+          <defs>
+            <pattern id="hachura" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <path d="M0 0V8" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2"/>
+            </pattern>
+            <pattern id="trancado" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+              <path d="M0 0V6" stroke="#fff" stroke-opacity=".55" stroke-width="1.4"/>
+            </pattern>
+          </defs>
+
+          <!-- cruzeta em corte e ferragem de fixação dobrada -->
+          <rect class="cf-cruzeta" x="398" y="286" width="40" height="84" fill="url(#hachura)"/>
+          <path class="cf-galv" d="M342 318H384L398 304V340L384 330H342Z"/>
+          <circle class="cf-parafuso" cx="372" cy="324" r="3.4"/>
+          <circle class="cf-parafuso" cx="410" cy="300" r="3.4"/><circle class="cf-parafuso" cx="410" cy="356" r="3.4"/>
+
+          <!-- cabo de entrada e conector paralelo -->
+          <path class="cf-cabo-capa" d="M406 -40C400 20 356 70 318 92"/>
+          <path class="cf-cabo-alma" d="M406 -40C400 20 356 70 318 92"/>
+          <rect class="cf-galv" x="292" y="82" width="34" height="20" rx="3"/>
+          <path class="cf-ferro" d="M298 82V74H320V82M302 74L309 68L316 74"/>
+
+          <!-- braço superior galvanizado, mola, lâmina de contato e capuz -->
+          <rect class="cf-galv" x="190" y="102" width="150" height="12" rx="2"/>
+          <path class="cf-ferro" d="M318 114V148"/>
+          <path class="cf-mola" d="M214 114l9 3-18 3 18 3-18 3 18 3-18 3 9 3"/>
+          <path class="cf-cobre" d="M262 114C262 134 240 140 222 142"/>
+          <path class="cf-capuz" d="M158 152V138Q158 126 171 126H210Q223 126 223 139V152Z"/>
+          <path class="cf-ferro" d="M158 136C138 136 132 112 150 106"/>
+          <path class="cf-ferro" d="M223 132C238 132 244 116 236 108"/>
+
+          <!-- isolador de porcelana: tampas, saias arredondadas e corpo central -->
+          <rect class="cf-galv" x="298" y="146" width="40" height="20" rx="5"/>
+          <rect class="cf-porcelana" x="304" y="164" width="28" height="298"/>
+          <g class="cf-saias">
+            <rect x="282" y="170" width="72" height="15" rx="7.5"/><rect x="282" y="193" width="72" height="15" rx="7.5"/>
+            <rect x="282" y="216" width="72" height="15" rx="7.5"/><rect x="282" y="239" width="72" height="15" rx="7.5"/>
+            <rect x="282" y="262" width="72" height="15" rx="7.5"/>
+            <rect x="282" y="378" width="72" height="15" rx="7.5"/><rect x="282" y="401" width="72" height="15" rx="7.5"/>
+            <rect x="282" y="424" width="72" height="15" rx="7.5"/><rect x="282" y="447" width="72" height="15" rx="7.5"/>
+          </g>
+          <rect class="cf-porcelana" x="292" y="284" width="52" height="90" rx="12"/>
+          <path class="cf-brilho" d="M290 175H300M290 198H300M290 221H300M290 244H300M290 267H300M300 294V364M290 383H300M290 406H300M290 429H300M290 452H300"/>
+          <rect class="cf-galv" x="298" y="462" width="40" height="20" rx="5"/>
+
+          <!-- etiqueta de classe -->
+          <g class="cf-etiqueta">
+            <rect x="352" y="392" width="70" height="38" rx="2"/>
+            <text x="387" y="407">15 kV</text><text x="387" y="422">100 A</text>
+          </g>
+
+          <!-- ferragem inferior, dobradiça de bronze e conector de saída -->
+          <rect class="cf-galv" x="196" y="466" width="106" height="11" rx="2"/>
+          <path class="cf-bronze" d="M162 458H206V490Q206 502 194 502H174Q162 502 162 490Z"/>
+          <rect class="cf-galv" x="226" y="478" width="30" height="18" rx="3"/>
+          <path class="cf-ferro" d="M232 496V504H250V496"/>
+          <path class="cf-cabo-capa" d="M241 504C250 560 320 600 312 710"/>
+          <path class="cf-cabo-alma" d="M241 504C250 560 320 600 312 710"/>
+
+          <!-- cartucho (gira pela dobradiça) -->
+          <g class="cf-tubo">
+            <!-- elo fusível: botão, elemento fusível, cabo trançado e rabicho -->
+            <g class="cf-elo">
+              <rect class="cf-elo-botao" x="171" y="178" width="18" height="6" rx="1.5"/>
+              <path class="cf-elo-fio" d="M180 184V190"/>
+              <rect class="cf-elo-luva" x="175" y="190" width="10" height="34" rx="2"/>
+              <path class="cf-elo-fio" d="M180 194V220"/>
+              <path class="cf-elo-cabo" d="M180 224V470C180 492 196 498 206 506"/>
+              <path class="cf-elo-trama" d="M180 224V470C180 492 196 498 206 506"/>
+              <circle class="cf-elo-ponta" cx="208" cy="508" r="3.2"/>
+            </g>
+            <rect class="cf-tubo-corpo" x="168" y="176" width="24" height="266" rx="3"/>
+            <path class="cf-tubo-fibra" d="M172 210H188M172 236H188M172 262H188M172 352H188M172 378H188M172 404H188"/>
+            <rect class="cf-tubo-faixa" x="168" y="292" width="24" height="44"/>
+            <text class="cf-tubo-txt" x="0" y="0" transform="translate(181 314) rotate(-90)">10K</text>
+            <rect class="cf-bronze" x="161" y="152" width="38" height="28" rx="4"/>
+            <path class="cf-bronze-traco" d="M161 160H151"/>
+            <circle class="cf-olhal" cx="140" cy="164" r="13"/>
+            <rect class="cf-bronze" x="161" y="436" width="38" height="32" rx="4"/>
+            <circle class="cf-parafuso" cx="180" cy="472" r="4"/>
+            <path class="cf-ferro cf-grossa" d="M162 452L138 470"/>
+          </g>
+          <g class="cf-arcos"><polyline class="cf-arco" points=""/><polyline class="cf-arco" points=""/><polyline class="cf-arco" points=""/></g>
+        </svg>
+      </div>
+
+      <div class="cabine-texto" data-flip>
+        <p class="rotulo"><span class="etapa">03</span> A cabine primária</p>
+        <div class="falas">
+          <div class="fala" data-de="0" data-ate=".17">
+            <h2 data-arco>O momento em que ninguém pode errar.</h2>
+            <p>Na cabine primária a energia da concessionária entra na sua empresa. Blindada ou de alvenaria, é ali que se decide se a operação liga com segurança.</p>
+          </div>
+          <div class="fala" data-de=".17" data-ate=".57">
+            <h2>Cada proteção no lugar antes de fechar.</h2>
+            <p>Montagem, ajuste e conferência antes da energização. Sem pressa no que é perigoso, sem hesitação na hora de fazer.</p>
+          </div>
+          <div class="fala fala-contagem" data-de=".57" data-ate=".79">
+            <p class="contagem-rotulo">Fechamento em</p>
+            <p class="contagem-num" aria-hidden="true">3</p>
+          </div>
+          <div class="fala fala-final" data-de=".88" data-ate="1.01">
+            <h2>Energizado.</h2>
+            <p>Cabines primárias blindadas e de alvenaria, montadas e energizadas pela J.A, de ponta a ponta.</p>
+          </div>
+        </div>
+
+        <div class="instrumento" aria-hidden="true">
+          <div class="leituras">
+            <div class="leitura leitura-rede"><span>Rede</span><b>13,8</b><small>kV</small></div>
+            <div class="leitura leitura-cabine"><span>Cabine</span><b class="kv">0,0</b><small>kV</small></div>
+          </div>
+          <div class="medidor"><i class="medidor-barra"></i></div>
+          <ul class="checklist">
+            <li data-on=".26"><span>Elo fusível</span><em data-off="Ausente" data-on-txt="Inserido">Ausente</em></li>
+            <li data-on=".46"><span>Proteções</span><em data-off="Em teste" data-on-txt="Conferidas">Em teste</em></li>
+            <li data-on=".77"><span>Cartucho</span><em data-off="Aberto" data-on-txt="Fechado">Aberto</em></li>
+            <li data-on=".88"><span>Cabine primária</span><em data-off="Desenergizada" data-on-txt="Energizada">Desenergizada</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · A SALA DE PAINÉIS ============ -->
+<section class="s-paineis" id="paineis" data-fx-fundo="#ECEFE6" data-fx-tinta="#0B0F0C">
+  <div class="paineis-cabeca">
+    <div>
+      <p class="rotulo"><span class="etapa">04</span> A sala de painéis</p>
+      <h2 data-fx="subir" data-arco>Do cubículo à planta inteira.</h2>
+    </div>
+    <p data-fx="surgir" data-fx-atraso="200">Com a energia dentro de casa, ela precisa ser distribuída, comandada e protegida. Montamos os painéis e a infraestrutura que fazem isso funcionar todos os dias.</p>
+  </div>
+
+  <div class="cubiculos">
+    <article class="cubiculo c1">
+      <div class="porta" aria-hidden="true"><span class="plaqueta">CUB-01 · Painéis</span><i class="venezianas"></i><i class="macaneta"></i></div>
+      <div class="interior">
+        <p class="cub-status">CUB-01 <span>Operando</span></p>
+        <h3>Montagem de painéis elétricos</h3>
+        <p>Quadros de distribuição, comando e força, montados e conferidos antes de sair para a obra.</p>
+      </div>
+    </article>
+    <article class="cubiculo c2">
+      <div class="porta" aria-hidden="true"><span class="plaqueta">CUB-02 · MT</span><i class="venezianas"></i><i class="macaneta"></i></div>
+      <div class="interior">
+        <p class="cub-status">CUB-02 <span>Operando</span></p>
+        <h3>Cubículos de média tensão</h3>
+        <p>Entrada, medição, proteção e transformação, montados para a subestação de cada cliente.</p>
+      </div>
+    </article>
+    <article class="cubiculo c3">
+      <div class="porta" aria-hidden="true"><span class="plaqueta">CUB-03 · Equip.</span><i class="venezianas"></i><i class="macaneta"></i></div>
+      <div class="interior">
+        <p class="cub-status">CUB-03 <span>Operando</span></p>
+        <h3>Equipamentos de média tensão</h3>
+        <p>Disjuntores, seccionadoras, chaves fusíveis e relés de proteção, instalados e ajustados.</p>
+      </div>
+    </article>
+    <article class="cubiculo c4">
+      <div class="porta" aria-hidden="true"><span class="plaqueta">CUB-04 · Indústria</span><i class="venezianas"></i><i class="macaneta"></i></div>
+      <div class="interior">
+        <p class="cub-status">CUB-04 <span>Operando</span></p>
+        <h3>Instalações industriais</h3>
+        <p>Força, iluminação, aterramento e alimentação de máquinas para fábricas e galpões.</p>
+      </div>
+    </article>
+    <article class="cubiculo c5">
+      <div class="porta" aria-hidden="true"><span class="plaqueta">CUB-05 · Infra</span><i class="venezianas"></i><i class="macaneta"></i></div>
+      <div class="interior">
+        <p class="cub-status">CUB-05 <span>Operando</span></p>
+        <h3>Infraestrutura de energia</h3>
+        <p>Eletrocalhas, leitos, dutos e toda a estrutura que leva a energia de um ponto ao outro da planta.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 6 · 35 ANOS ============ -->
+<section class="s-anos" data-fx-fundo="#14301F" data-fx-tinta="#E9EDE4">
+  <svg class="curvas" viewBox="0 0 1440 600" preserveAspectRatio="none" data-fx-paralaxe="0.12" aria-hidden="true">
+    <path d="M0 420C180 330 300 380 470 300S760 140 900 210 1180 330 1440 250"/>
+    <path d="M0 460C200 380 320 420 490 350S770 200 910 260 1190 370 1440 300"/>
+    <path d="M0 500C210 430 340 460 510 400S780 260 920 310 1200 410 1440 350"/>
+    <path d="M0 540C220 480 360 500 530 450S790 320 930 360 1210 450 1440 400"/>
+    <path d="M0 580C230 530 380 540 550 500S800 380 940 410 1220 490 1440 450"/>
+  </svg>
+  <div class="anos-centro">
+    <p class="anos-num"><span data-fx="contar" data-fx-fim="35" data-fx-sufixo="+" data-fx-duracao="2200">35+</span></p>
+    <p class="rotulo anos-rotulo">anos de experiência</p>
+    <h2 data-fx="subir" data-fx-atraso="300" data-arco>Onde é perigoso ou complexo, a gente entra. Sem conversa, sem medo: a J.A vai lá e resolve.</h2>
+    <p class="quem" data-fx="surgir" data-fx-atraso="600"><span>Quem chama a J.A</span> Indústrias · Construtoras · Condomínios · Grandes redes de comércio · Escritórios de engenharia</p>
+  </div>
+</section>
+
+<!-- ============ 7 · FECHE A CHAVE ============ -->
+<section class="s-contato" id="contato" data-fx-fundo="#0B0F0C" data-fx-tinta="#E9EDE4">
+  <div class="contato-grade">
+    <div class="contato-texto">
+      <p class="rotulo"><span class="etapa">05</span> Você</p>
+      <h2 data-fx="subir" data-arco>Feche a chave.</h2>
+      <p class="contato-lead" data-fx="surgir" data-fx-atraso="150">Puxe a alavanca para cima e fale com a gente. Conte o que precisa ser feito: a J.A responde com o caminho e o orçamento.</p>
+      <a class="btn btn-orcamento" href="https://wa.me/5511999181975?text=Ol%C3%A1%2C%20J.A%20Eletricidades!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-arco>Pedir orçamento pelo WhatsApp</a>
+      <p class="contato-aviso" aria-live="polite"></p>
+      <ul class="contatos">
+        <li><span>Telefone</span><a href="tel:+5511999181975">(11) 99918-1975</a></li>
+        <li><span>WhatsApp</span><a href="https://wa.me/5511999181975" target="_blank" rel="noopener">(11) 99918-1975</a></li>
+        <li><span>E-mail</span><a href="mailto:jaeletricidades@gmail.com">jaeletricidades@gmail.com</a></li>
+        <li><span>Atendimento</span>São Paulo e todo o Brasil</li>
+      </ul>
+    </div>
+
+    <div class="chave-faca-palco">
+      <button class="chave-faca" type="button" aria-pressed="false" aria-label="Fechar a chave e ligar o botão de orçamento">
+        <svg viewBox="0 0 300 480" aria-hidden="true">
+          <circle class="cfk-lampada" cx="196" cy="34" r="10"/>
+          <text class="cfk-txt" x="214" y="39">ABERTA</text>
+          <!-- cabo e conector de entrada -->
+          <path class="cfk-cabo" d="M-10 20C30 30 70 50 86 62"/>
+          <rect class="cfk-galv" x="78" y="58" width="26" height="16" rx="3"/>
+          <!-- braço superior, mola, lâmina de cobre, capuz e gancho -->
+          <rect class="cfk-galv" x="58" y="74" width="114" height="10" rx="2"/>
+          <path class="cfk-mola" d="M150 84l7 2-14 2 14 2-14 2 14 2-7 2"/>
+          <path class="cfk-cobre" d="M118 84C118 100 128 104 134 106"/>
+          <path class="cfk-capuz" d="M132 112V102Q132 94 141 94H160Q169 94 169 103V112Z"/>
+          <path class="cfk-ferro" d="M169 100C186 100 192 82 178 76"/>
+          <!-- isolador -->
+          <rect class="cfk-galv" x="54" y="104" width="32" height="16" rx="4"/>
+          <path class="cfk-ferro" d="M70 84V104"/>
+          <rect class="cfk-porcelana" x="59" y="118" width="22" height="270"/>
+          <g class="cfk-saias">
+            <rect x="42" y="124" width="56" height="13" rx="6.5"/><rect x="42" y="144" width="56" height="13" rx="6.5"/>
+            <rect x="42" y="164" width="56" height="13" rx="6.5"/><rect x="42" y="184" width="56" height="13" rx="6.5"/>
+            <rect x="42" y="204" width="56" height="13" rx="6.5"/>
+            <rect x="42" y="300" width="56" height="13" rx="6.5"/><rect x="42" y="320" width="56" height="13" rx="6.5"/>
+            <rect x="42" y="340" width="56" height="13" rx="6.5"/><rect x="42" y="360" width="56" height="13" rx="6.5"/>
+          </g>
+          <rect class="cfk-porcelana" x="50" y="224" width="40" height="70" rx="10"/>
+          <path class="cfk-galv" d="M50 250H14L4 240V270L14 262H50Z"/>
+          <path class="cfk-brilho" d="M48 129H56M48 149H56M48 169H56M48 189H56M48 209H56M56 232V286M48 305H56M48 325H56M48 345H56M48 365H56"/>
+          <rect class="cfk-galv" x="54" y="384" width="32" height="16" rx="4"/>
+          <!-- ferragem inferior, dobradiça e saída -->
+          <rect class="cfk-galv" x="80" y="390" width="62" height="10" rx="2"/>
+          <path class="cfk-bronze" d="M136 392H166V414Q166 424 156 424H146Q136 424 136 414Z"/>
+          <rect class="cfk-galv" x="94" y="404" width="24" height="14" rx="3"/>
+          <path class="cfk-cabo" d="M106 418C110 440 96 460 100 492"/>
+          <!-- cartucho com elo -->
+          <g class="cfk-lamina">
+            <path class="cfk-elo" d="M150 136V398C150 412 160 418 168 422"/>
+            <rect class="cfk-elo-botao" x="143" y="128" width="14" height="5" rx="1.5"/>
+            <rect class="cfk-tubo" x="141" y="132" width="18" height="250" rx="3"/>
+            <path class="cfk-fibra" d="M144 170H156M144 200H156M144 300H156M144 330H156"/>
+            <rect class="cfk-bronze" x="136" y="110" width="28" height="24" rx="3"/>
+            <path class="cfk-bronze-traco" d="M164 120H170"/>
+            <circle class="cfk-olhal" cx="180" cy="122" r="11"/>
+            <rect class="cfk-bronze" x="136" y="378" width="28" height="30" rx="3"/>
+            <circle class="cfk-parafuso" cx="150" cy="404" r="3.5"/>
+          </g>
+          <polyline class="cfk-arco" points=""/>
+          <g class="cfk-seta">
+            <path class="cfk-seta-trilho" d="M352 186Q340 86 204 100"/>
+            <path class="cfk-seta-fluxo" d="M352 186Q340 86 204 100"/>
+            <path class="cfk-seta-ponta" d="M218 88L202 100L218 112"/>
+            <text class="cfk-seta-txt" x="306" y="78">PUXE</text>
+          </g>
+        </svg>
+      </button>
+      <button class="btn-ligar" type="button"><i aria-hidden="true"></i><span>Ligar</span></button>
+      <p class="chave-dica">Puxe o cartucho para cima ou toque em Ligar.</p>
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <p class="rodape-marca" aria-label="J.A Eletricidades"><span class="selo selo-rodape"><svg viewBox="0 0 240 124" aria-hidden="true"><text class="logo-ja" x="120" y="76">J.A</text><text class="logo-nome" x="120" y="114" textLength="196" lengthAdjust="spacingAndGlyphs">Eletricidades</text></svg></span></p>
+    <p>São Paulo · atendimento em todo o Brasil</p>
+    <p>© 2026 J.A Eletricidades</p>
+  </footer>
+</section>
+
+</main>
+</body>
+</html>
